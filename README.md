@@ -1,4 +1,4 @@
-# IEMS ERP Sistemi
+# IEMS ERP
 
 ## Proje Özeti
 Geliştirilen IEMS ERP sistemi, modern işletmelerin ihtiyaçlarına uygun olarak maliyet ve zaman tasarrufu sağlamak amacıyla tek bir platformdan kapsamlı kontrol sunmaktadır. Sistem, admin, manager, supplier ve employee olmak üzere dört ana bölümden oluşmakta ve her kullanıcıya farklı yetkiler ve sorumluluklar vermektedir. Envanter kontrolü ve tedarik zinciri yönetimi üzerine yoğunlaşan IEMS ERP, kaynakların daha verimli kullanılmasını hedeflemektedir. Intellij, Spring Boot ve MySQL kullanılarak geliştirilen sistem, esnek, ölçeklenebilir ve güvenilir bir yapıya sahiptir. Yerli şirketlerin döviz kuru dalgalanmalarından kaynaklanan maliyet baskılarını azaltarak, yerel çözümler geliştirmelerine yardımcı olmayı amaçlamaktadır.
