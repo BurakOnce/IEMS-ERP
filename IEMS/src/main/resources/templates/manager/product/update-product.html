@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product - IEMS</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="update-product.css">
+
+
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- Centered text -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2>IEMS</h2>
+    </div>
+
+    <h4>Product</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/create-product">
+            <i class="bi bi-clipboard-plus"></i>
+            Add Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/update-product">
+            <i class="bi bi-clipboard-pulse"></i>
+            Edit Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/get-all-product">
+            <i class="bi bi-clipboard-data"></i>
+            Get All Product</a></li>
+    </ul>
+
+    <h4>Supply</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/manager/create-order">
+            <i class="bi bi-box2"></i>
+            Create Order</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/open-order">
+            <i class="bi bi-diagram-3"></i>
+            Order Statement</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/confirmed-orders">
+            <i class="bi bi-check2-circle"></i>
+            Confirmed Orders</a></li>
+
+    </ul>
+
+    <h4>Help</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/manager-questions">
+            <i class="bi bi-question-circle" ></i>
+            Questions </a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/manager-mail">
+            <i class="bi bi-envelope-paper"></i>
+            Send Mail </a></li>
+    </ul>
+    <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+                <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Main content -->
+<div style="margin-left: 250px; padding: 20px;"> <!-- Adjust left margin and padding as needed -->
+
+    <h4> Edit Product</h4>
+
+    <hr class="mt-0 mb-4">
+
+    <table id="example" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Quantity Units</th>
+            <th>Stock</th>
+            <th>Demand</th>
+            <th>Barcode</th>
+            <th>Discount</th>
+            <th>Price</th>
+            <th>Company</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="noteModalLabel">Note</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="noteModalBody" style="word-wrap: break-word;">
+                <!-- Note content will be inserted here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="editProductModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Ürün Düzenle</h2>
+        <form id="editProductForm">
+            <input type="hidden" id="editProductId" name="id">
+            <label for="editProductName">Ürün Adı:</label><input type="text" id="editProductName" name="name">
+            <label for="editProductCategory">Kategori:</label><input type="text" id="editProductCategory" name="category">
+            <label for="editProductQuantityUnits">Miktar Birimi:</label>
+            <select id="editProductQuantityUnits" name="quantityUnits" class="form-control">
+                <option value="" selected disabled> Miktar Birimi Seçin</option>
+                <option value="KILOGRAM">Kilogram</option>
+                <option value="METER">Metre</option>
+                <option value="PIECE">Adet</option>
+            </select>
+            <label for="editProductDescription">Açıklama:</label><input type="text" id="editProductDescription" name="description">
+            <label for="editProductStock">Stok:</label><input type="text" id="editProductStock" name="stock">
+            <label for="editProductDemand">Demand:</label><input type="text" id="editProductDemand" name="demand">
+            <label for="editProductBarcode">Barkod:</label><input type="text" id="editProductBarcode" name="barcode">
+            <label for="editProductDiscount">İndirim:</label><input type="text" id="editProductDiscount" name="discount">
+            <label for="editProductPrice">Fiyat:</label><input type="text" id="editProductPrice" name="price">
+            <button id="updateProductButton" type="submit">Kaydet</button>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="update-product.js"></script>
+
+
+
+</body>
+</html>

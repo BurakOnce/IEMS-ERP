@@ -1,0 +1,77 @@
+
+    .sidebar {
+      height: 100%;
+      width: 230px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .logo h2 {
+      margin: 0;
+      text-align: center; /* Logoyu ortala */
+    }
+
+    .menu h4 {
+      text-align: center; /* Menü başlıklarını ortala */
+    }
+
+    .links-container {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-container li {
+      margin-bottom: 5px;
+    }
+
+    .links-container li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      margin-left: 10px; /* Bağlantıları ortala */
+    }
+
+    .links-container li a:hover {
+      color: #555;
+      background-color: #ddd;
+    }
+
+
+    body{margin-top:20px;
+      margin-left: 230px;
+    }
+
+    .card .card-header {
+      font-weight: 500;
+    }
+
+    .nav-borders .nav-link.active {
+      color: #637a8c;
+      border-bottom-color: #637a8c;
+    }
+    .nav-borders .nav-link {
+      color: #69707a;
+      border-bottom-width: 0.125rem;
+      border-bottom-style: solid;
+      border-bottom-color: transparent;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .logout-container {
+      background-color: #fff; /* Arka plan rengi */
+      border-radius: 5px; /* Yuvarlatılmış köşeler */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dört bir tarafa gölge */
+    }
+
+    .logout-container form {
+      margin: 0; /* Formun kenarlardan boşluk bırakmaması */
+    }
+

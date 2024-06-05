@@ -1,0 +1,162 @@
+    .sidebar {
+      height: 100%;
+      width: 230px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .logo h2 {
+      margin: 0;
+      text-align: center; /* Logoyu ortala */
+    }
+
+    .menu h4 {
+      text-align: center; /* Menü başlıklarını ortala */
+    }
+
+    .links-container {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-container li {
+      margin-bottom: 5px;
+    }
+
+    .links-container li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      margin-left: 10px; /* Bağlantıları ortala */
+    }
+
+    .links-container li a:hover {
+      color: #555;
+      background-color: #ddd;
+    }
+
+    .container {
+      margin-left: 250px; /* Kartın soldan boşluk alması için */
+    }
+
+
+    .card {
+      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 0 solid rgba(0,0,0,.125);
+      border-radius: 1rem;
+
+
+    }
+
+    .card-body {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 1.5rem 1.5rem;
+
+    }
+
+    #create-button {
+      background-color: #637a8c; /* Arka plan rengi */
+      color: white; /* Metin rengi */
+      border: none; /* Kenarlık yok */
+      border-radius: 3px; /* Kenar yuvarlatma */
+      padding: 6px 10px; /* İç dolgu */
+      width: 100px; /* Genişlik */
+      transition: background-color 0.3s ease; /* Geçiş efekti */
+
+    }
+    #create-button:hover {
+      background-color: #91a7c4; /* Mouse üzerine gelindiğinde arka plan rengi */
+    }
+
+    #reset-button{
+      background-color: #4e5357; /* Arka plan rengi */
+      color: white; /* Metin rengi */
+      border: none; /* Kenarlık yok */
+      border-radius: 3px; /* Kenar yuvarlatma */
+      padding: 6px 10px; /* İç dolgu */
+      width: 70px; /* Genişlik */
+      transition: background-color 0.3s ease; /* Geçiş efekti */
+    }
+    #reset-button:hover {
+      background-color: #24242d; /* Mouse üzerine gelindiğinde arka plan rengi */
+    }
+
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #91a7c4;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #91a7c4;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    .logout-container {
+      background-color: #fff; /* Arka plan rengi */
+      border-radius: 5px; /* Yuvarlatılmış köşeler */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dört bir tarafa gölge */
+    }
+
+    .logout-container form {
+      margin: 0; /* Formun kenarlardan boşluk bırakmaması */
+    }
+
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - IEMS</title>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="supplier-questions.css">
+
+
+</head>
+
+<body>
+
+<!-- Kenar çubuğu -->
+<div class="sidebar">
+    <!-- Ortalanmış metin -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2>IEMS</h2>
+    </div>
+
+    <h4>Supply</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/supplier/my-supplies/duration-order">
+            <i class="bi bi-box-arrow-in-right"></i>
+            My Supplies</a></li>
+        <li>
+            <a href="http://localhost:8080/appSupply/supplier/open-pending-orders">
+                <i class="bi bi-list-ul"></i>
+                Public Orders
+            </a>
+        </li>
+    </ul>
+
+    <h4>Help</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/supplier/help/supplier-questions">
+            <i class="bi bi-question-circle" ></i>
+            Questions </a></li>
+        <li>
+            <a href="http://localhost:8080/appSupply/supplier/help/supplier-mail">
+                <i class="bi bi-envelope-paper"></i>
+                Send Mail
+            </a>
+        </li>
+    </ul>
+
+    <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+                <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+<section class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-4 p-md-5 p-xl-6">
+                        <div class="text-center mb-2-3 mb-lg-6">
+                            <span class="section-title text-primary">IEMS</span>
+                            <h2 class="h1 mb-0 text-secondary">Sıkça Sorulan Sorular</h2>
+                        </div>
+                        <div id="accordion" class="accordion-style">
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <span class="text-theme-secondary me-2">S.</span> Genel siparişleri nasıl görüntülerim?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Genel siparişleri görmek için, kenar çubuğundaki "Genel Siparişler" bölümüne gidin. Tüm mevcut siparişlerin detaylarını görebilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="text-theme-secondary me-2">S.</span> Bir siparişi nasıl alırım?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Bir siparişi almak için, almak istediğiniz siparişin yanındaki "Al" düğmesine tıklayın. Bu, bilgilerinizi o siparişin tedarikçisi olarak günceller.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            <span class="text-theme-secondary me-2">S.</span> Bir siparişi tamamlamak için ne yapmalıyım?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Bir siparişi tamamlamak için, ilgili siparişin yanındaki "Tamamla" düğmesine tıklayın. Bu, siparişi tamamladığınızı ve tedarik sürecini sonlandırdığınızı gösterecektir.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingSeven">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                            <span class="text-theme-secondary me-2">S.</span> Bir siparişi başarısız olarak işaretleme işlemi nasıl yapılır?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Bir siparişi başarısız olarak işaretleme işlemi için, ilgili siparişin yanındaki "Başarısız" düğmesine tıklayın. Bu, siparişi başarısız olarak işaretlemeniz ve tedarik sürecini sonlandırmanız gerektiğini gösterecektir.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="text-theme-secondary me-2">S.</span> Bir siparişi alırken bir hata ile karşılaşırsam ne yapmalıyım?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Bir siparişi alırken bir hata ile karşılaşırsanız, giriş yaptığınızdan emin olun ve tekrar deneyin. Sorun devam ederse, destek için "E-posta Gönder" bölümünden iletişime geçin.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <span class="text-theme-secondary me-2">S.</span> Destekle nasıl iletişime geçerim?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Destekle iletişime geçmek için kenar çubuğundaki "E-posta Gönder" bölümüne gidin ve iletişim formunu doldurun.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <span class="text-theme-secondary me-2">S.</span> Sipariş detayları yanlışsa ne yapmalıyım?
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        Siparişte herhangi bir yanlış detay fark ederseniz, derhal destek ile iletişime geçin ve sorunu düzeltmek için "Send Mail" bölümünü kullanın.
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier - IEMS</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="supplier.css">
+
+
+
+
+</head>
+<body>
+
+<!-- Kenar çubuğu -->
+<div class="sidebar">
+  <!-- Ortalanmış metin -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <h2>IEMS</h2>
+  </div>
+
+
+  <h4>Supply</h4>
+  <ul class="links-container">
+    <li><a href="http://localhost:8080/appSupply/supplier/my-supplies/duration-order">
+      <i class="bi bi-box-arrow-in-right"></i>
+      My Supplies</a></li>
+    <li>
+      <a href="http://localhost:8080/appSupply/supplier/open-pending-orders">
+        <i class="bi bi-list-ul"></i>
+        Public Orders
+      </a>
+    </li>
+  </ul>
+
+  <h4>Help</h4>
+  <ul class="links-container">
+    <li><a href="http://localhost:8080/appSupply/supplier/help/supplier-questions">
+      <i class="bi bi-question-circle" ></i>
+      Questions </a></li>
+    <li>
+      <a href="http://localhost:8080/appSupply/supplier/help/supplier-mail">
+        <i class="bi bi-envelope-paper"></i>
+        Send Mail
+      </a>
+    </li>
+  </ul>
+
+  <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+    <form th:action="@{/logout}" method="post">
+      <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+        <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+        Sign Out
+      </button>
+    </form>
+  </div>
+
+
+
+</div>
+
+
+
+
+<div style="margin-left: 250px; padding: 20px;">
+  <h2>SUPPLIER</h2>
+  <h3>Inventory Management and Supply System</h3>
+  <h4>  IEMS'e Hoşgeldiniz</h4>
+
+  <tbody>
+
+  </tbody>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</body>
+</html>
+

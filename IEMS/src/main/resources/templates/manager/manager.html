@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager -IEMS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="manager.css">
+
+
+</head>
+<body>
+
+<!-- Kenar çubuğu -->
+<div class="sidebar">
+    <!-- Ortalanmış metin -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2>IEMS</h2>
+    </div>
+
+    <h4>Product</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/create-product">
+            <i class="bi bi-clipboard-plus"></i>
+            Add Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/update-product">
+            <i class="bi bi-clipboard-pulse"></i>
+            Edit Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/get-all-product">
+            <i class="bi bi-clipboard-data"></i>
+            Get All Product</a></li>
+    </ul>
+
+    <h4>Supply</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/manager/create-order">
+            <i class="bi bi-box2"></i>
+            Create Order</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/open-order">
+            <i class="bi bi-diagram-3"></i>
+            Order Statement</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/confirmed-orders">
+            <i class="bi bi-check2-circle"></i>
+            Confirmed Orders</a></li>
+
+    </ul>
+
+    <h4>Help</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/manager-questions">
+            <i class="bi bi-question-circle" ></i>
+            Questions </a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/manager-mail">
+            <i class="bi bi-envelope-paper"></i>
+            Send Mail </a></li>
+    </ul>
+
+    <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+                <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+                Sign Out
+            </button>
+        </form>
+    </div>
+
+</div>
+
+<div style="margin-left: 250px; padding: 20px;">
+    <h2>MANAGER</h2>
+    <h3>Inventory Management and Supply System</h3>
+    <h4>  IEMS'e Hoşgeldiniz</h4>
+
+    <tbody>
+
+    </tbody>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
+

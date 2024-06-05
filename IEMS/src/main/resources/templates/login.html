@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Login - IEMS </title>
+
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #637a8c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #637a8c;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .error-messages {
+            margin-top: 10px;
+        }
+        .center-text {
+            text-align: center;
+            font-size: 24px; /* Yazı boyutunu büyütün */
+            color: #333; /* Yazı rengini ayarlayın */
+            margin-top: 20px; /* Üstten boşluk ekleyin */
+            font-family: 'Arial', sans-serif; /* Yazı tipini ayarlayın */
+            font-weight: bold; /* Yazıyı kalın yapın */
+            padding: 10px; /* İç boşluk ekleyin */
+            border-radius: 5px; /* Kenarları yuvarlatın */
+        }
+    </style>
+</head>
+<body>
+
+<form th:action="@{/login}" method="post">
+    <div class="center-text">
+        <label>IEMS</label>
+    </div>
+    <div><label> Username : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+
+<div class="error-messages">
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+</div>
+
+</body>
+</html>

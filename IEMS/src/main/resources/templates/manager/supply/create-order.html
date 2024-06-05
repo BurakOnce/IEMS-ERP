@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Order - IEMS</title>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="create-order.css">
+
+
+</head>
+<body>
+
+<!-- Kenar çubuğu -->
+<div class="sidebar">
+    <!-- Ortalanmış metin -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2>IEMS</h2>
+    </div>
+
+    <h4>Product</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/create-product">
+            <i class="bi bi-clipboard-plus"></i>
+            Add Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/update-product">
+            <i class="bi bi-clipboard-pulse"></i>
+            Edit Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/get-all-product">
+            <i class="bi bi-clipboard-data"></i>
+            Get All Product</a></li>
+    </ul>
+
+    <h4>Supply</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/manager/create-order">
+            <i class="bi bi-box2"></i>
+            Create Order</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/open-order">
+            <i class="bi bi-diagram-3"></i>
+            Order Statement</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/confirmed-orders">
+            <i class="bi bi-check2-circle"></i>
+            Confirmed Orders</a></li>
+
+    </ul>
+
+    <h4>Help</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/manager-questions">
+            <i class="bi bi-question-circle" ></i>
+            Questions </a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/manager-mail">
+            <i class="bi bi-envelope-paper"></i>
+            Send Mail </a></li>
+    </ul>
+    <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+                <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+
+    <div class="container">
+        <!-- Title -->
+        <div class="d-flex justify-content-between align-items-lg-center py-3 flex-column flex-lg-row">
+            <h4> Create New Order</h4>
+
+            <div class="hstack gap-3">
+                <button id="reset-button" type="button" onclick="resetForm()">Reset</button>
+                <button type="button" id="create-button" onclick="createSupply()" name="submit" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="row">
+            <!-- Left side -->
+            <div class="col-lg-8">
+                <!-- Basic information -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h6 mb-4">Basic information</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="productName">Product Name</label>
+                                    <input type="text" class="form-control" id="productName">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="contactPersonName">Contact Person Name</label>
+                                    <input type="text" class="form-control" id="contactPersonName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="contactPersonPhone">Contact Person Phone</label>
+                                    <input type="text" class="form-control" id="contactPersonPhone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Address -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h6 mb-4">Company and Order Information</h3>
+                        <div class="mb-3">
+                            <label for="companyAddress">Company Address </label>
+                            <input type="text" class="form-control" id="companyAddress">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="orderingCompany">Ordering Company</label>
+                                    <input type="text" class="form-control" id="orderingCompany" name="orderingCompany" value="Your Company" readonly>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="categories">Order Category</label>
+                                    <input type="text" class="form-control" id="categories">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="orderDate">Order Date</label>
+                                    <input type="date" class="form-control" id="orderDate">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label for="deliveryTimeInDays">Delivery Time In Days</label>
+                                    <input type="text" class="form-control" id="deliveryTimeInDays">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right side -->
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h6">Quantity Units</h3>
+                        <select id="quantityUnits" class="form-control">
+                            <option value="" selected disabled>Select Quantity Unit</option>
+                            <option value="KILOGRAM">Kilogram</option>
+                            <option value="METER">Meter</option>
+                            <option value="PIECE">Piece</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" class="form-control" id="quantity">
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="h6">Notes</h3>
+                        <textarea id="orderNotes" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <h6 class="mb-1">Open Order</h6>
+                            <small>Is the order ready for publication?</small>
+                        </div>
+                        <form id="orderForm">
+                            <label class="switch mb-0">
+                                <input type="checkbox" id="open">
+                                <span class="slider"></span>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="alert info">
+            <strong>Bilgilendirme!</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tedarik isteği başarılı.
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="create-order.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+        .sidebar {
+            height: 100%;
+            width: 230px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            text-align: center; /* Logoyu ortala */
+        }
+
+        .menu h4 {
+            text-align: center; /* Menü başlıklarını ortala */
+        }
+
+        .links-container {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links-container li {
+            margin-bottom: 5px;
+        }
+
+        .links-container li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-left: 10px; /* Bağlantıları ortala */
+        }
+
+        .links-container li a:hover {
+            color: #555;
+            background-color: #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        body{
+            margin-top:60px;
+            margin-left:140px;
+        }
+        .gradient-brand-color {
+            background-image: -webkit-linear-gradient(0deg, #637a8c 0%, #91a7c4 100%);
+            background-image: -ms-linear-gradient(0deg, #637a8c 0%, #91a7c4 100%);
+            color: #fff;
+        }
+        .contact-info__wrapper {
+            overflow: hidden;
+            border-radius: .625rem .625rem 0 0
+        }
+
+        @media (min-width: 1024px) {
+            .contact-info__wrapper {
+                border-radius: 0 .625rem .625rem 0;
+                padding: 5rem !important
+            }
+        }
+        .contact-info__list span.position-absolute {
+            left: 0
+        }
+        .z-index-101 {
+            z-index: 101;
+        }
+        .list-style--none {
+            list-style: none;
+        }
+        .contact__wrapper {
+            background-color: #fff;
+            border-radius: 0 0 .625rem .625rem
+        }
+
+        @media (min-width: 1024px) {
+            .contact__wrapper {
+                border-radius: .625rem 0 .625rem .625rem
+            }
+        }
+        @media (min-width: 1024px) {
+            .contact-form__wrapper {
+                padding: 5rem !important
+            }
+        }
+        .shadow-lg, .shadow-lg--on-hover:hover {
+            box-shadow: 0 1rem 3rem rgba(135, 141, 166, 0.1) !important;
+        }
+
+        .sendButton {
+            background-color: #637a8c;
+            color: white;
+            /* Diğer stiller */
+        }
+        .sendButton:hover {
+            background-color: #91a7c4; /* veya başka bir renk */
+            color: white;
+        }
+        .logout-container {
+            background-color: #fff; /* Arka plan rengi */
+            border-radius: 5px; /* Yuvarlatılmış köşeler */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dört bir tarafa gölge */
+        }
+
+        .logout-container form {
+            margin: 0; /* Formun kenarlardan boşluk bırakmaması */
+        }
+        .alert {
+            padding: 20px;
+            color: white;
+            opacity: 1;
+            transition: opacity 0.6s;
+            margin-bottom: 15px;
+            z-index: 9999;
+            display: none;
+        }
+
+        .alert.info {background-color: #91a7c4;}

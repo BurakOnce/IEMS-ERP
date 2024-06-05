@@ -1,0 +1,50 @@
+
+    .sidebar {
+        height: 100%;
+        width: 230px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .logo h2 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu h4 {
+        text-align: center;
+    }
+
+    .links-container {
+        list-style: none;
+        padding: 0;
+    }
+
+    .links-container li {
+        margin-bottom: 5px;
+    }
+
+    .links-container li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        margin-left: 10px;
+    }
+
+    .links-container li a:hover {
+        color: #555;
+        background-color: #ddd;
+    }
+    .logout-container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .logout-container form {
+        margin: 0;
+    }
+

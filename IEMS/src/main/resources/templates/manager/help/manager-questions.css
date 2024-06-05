@@ -1,0 +1,190 @@
+
+    .sidebar {
+      height: 100%;
+      width: 230px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .logo h2 {
+      margin: 0;
+      text-align: center; /* Logoyu ortala */
+    }
+
+    .menu h4 {
+      text-align: center; /* Menü başlıklarını ortala */
+    }
+
+    .links-container {
+      list-style: none;
+      padding: 0;
+    }
+
+    .links-container li {
+      margin-bottom: 5px;
+    }
+
+    .links-container li a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      margin-left: 10px; /* Bağlantıları ortala */
+    }
+
+    .links-container li a:hover {
+      color: #555;
+      background-color: #ffffff;
+    }
+
+    body
+    {
+      margin-top:-70px;
+      margin-left: 190px;
+    }
+
+    .accordion-style .card {
+      background: transparent;
+      box-shadow: none;
+      margin-bottom: 15px;
+      margin-top: 0 !important;
+      border: none;
+    }
+    .accordion-style .card:last-child {
+      margin-bottom: 0;
+    }
+    .accordion-style .card-header {
+      border: 0;
+      background: none;
+      padding: 0;
+      border-bottom: none;
+    }
+    .accordion-style .btn-link {
+      color: #ffffff;
+      position: relative;
+      background: #637a8c;
+      border: 1px solid #637a8c;
+      display: block;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      text-align: left;
+      white-space: normal;
+      box-shadow: none;
+      padding: 15px 55px;
+      text-decoration: none;
+    }
+    .accordion-style .btn-link:hover {
+      text-decoration: none;
+    }
+    .accordion-style .btn-link.collapsed {
+      background: #ffffff;
+      border: 1px solid #637a8c;
+      color: #1e2022;
+      border-radius: 3px;
+    }
+    .accordion-style .btn-link.collapsed:after {
+      background: none;
+      border-radius: 3px;
+      content: "+";
+      left: 16px;
+      right: inherit;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      height: 26px;
+      transform: none;
+      width: 26px;
+      top: 15px;
+      text-align: center;
+      background-color: #637a8c;
+      color: #ffffff;
+    }
+    .accordion-style .btn-link:after {
+      background: #ffffff;
+      border: none;
+      border-radius: 3px;
+      content: "-";
+      left: 16px;
+      right: inherit;
+      font-size: 20px;
+      font-weight: 600;
+      height: 26px;
+      line-height: 26px;
+      transform: none;
+      width: 26px;
+      top: 15px;
+      position: absolute;
+      color: #637a8c;
+      text-align: center;
+    }
+    .accordion-style .card-body {
+      padding: 20px;
+      border-top: none;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-left: 1px solid #637a8c;
+      border-right: 1px solid #637a8c;
+      border-bottom: 1px solid #637a8c;
+    }
+    @media screen and (max-width: 767px) {
+      .accordion-style .btn-link {
+        padding: 15px 40px 15px 55px;
+      }
+    }
+    @media screen and (max-width: 575px) {
+      .accordion-style .btn-link {
+        padding: 15px 20px 15px 55px;
+      }
+    }
+    .card-style1 {
+      box-shadow: 0px 0px 10px 0px rgb(89 75 128 / 9%);
+    }
+    .border-0 {
+      border: 0!important;
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #ffffff;
+      background-clip: border-box;
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0.25rem;
+    }
+
+    section {
+      padding: 120px 0;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .mb-2-3, .my-2-3 {
+      margin-bottom: 2.3rem;
+    }
+
+    .section-title {
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      position: relative;
+      display: inline-block;
+    }
+    .text-primary {
+      color: #303b44 !important;
+    }
+    .logout-container {
+      background-color: #fff; /* Arka plan rengi */
+      border-radius: 5px; /* Yuvarlatılmış köşeler */
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dört bir tarafa gölge */
+    }
+
+    .logout-container form {
+      margin: 0; /* Formun kenarlardan boşluk bırakmaması */
+    }

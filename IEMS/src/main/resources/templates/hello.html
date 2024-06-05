@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+  <title>Loading - IEMS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+  <style>
+
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70vh; /* This makes the container take the full height of the viewport */
+      margin-left: -20px;
+    }
+
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #637a8c;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+
+  </style>
+</head>
+<body>
+
+
+<div class="loader-container">
+  <div class="loader"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var globalRolesAsString;
+
+    // AJAX isteği gönder
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:8080/profile/current-user-role",
+      success: function (rolesAsString) {
+        console.log("Current user roles:", rolesAsString);
+        globalRolesAsString = rolesAsString;
+        // Yönlendirme işlemleri için rolü kontrol et
+        setTimeout(redirect, 1500);
+      },
+      error: function() {
+        console.log("Error fetching user roles.");
+        // Varsayılan yönlendirme
+        window.location.href = 'http://localhost:8080/default';
+      }
+    });
+
+    // Yönlendirme fonksiyonu
+    function redirect() {
+      console.log("User roles:", globalRolesAsString);
+
+      if (globalRolesAsString === "ROLE_ADMIN") {
+        window.location.href = 'http://localhost:8080/admin';
+      } else if (globalRolesAsString === "ROLE_MANAGER") {
+        window.location.href = 'http://localhost:8080/manager';
+      } else if (globalRolesAsString === "ROLE_EMPLOYEE") {
+        window.location.href = 'http://localhost:8080/employee';
+      } else if (globalRolesAsString === "ROLE_SUPPLIER") {
+        window.location.href = 'http://localhost:8080/supplier';
+      } else {
+        // Tanımsız rol durumunda varsayılan yönlendirme
+        window.location.href = 'http://localhost:8080/default';
+      }
+    }
+  });
+
+</script>
+
+</body>
+</html>

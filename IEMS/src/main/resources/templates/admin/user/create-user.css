@@ -1,0 +1,70 @@
+
+  .sidebar {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .logo h2 {
+    margin: 0;
+    text-align: center; /* Logoyu ortala */
+  }
+
+  .menu h4 {
+    text-align: center; /* Menü başlıklarını ortala */
+  }
+
+  .links-container {
+    list-style: none;
+    padding: 0;
+  }
+
+  .links-container li {
+    margin-bottom: 5px;
+  }
+
+  .links-container li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-left: 10px; /* Bağlantıları ortala */
+  }
+
+  .links-container li a:hover {
+    color: #555;
+    background-color: #ddd;
+  }
+  .logout-container {
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Dört bir tarafa gölge */
+  }
+
+  .logout-container form {
+    margin: 0; /* Formun kenarlardan boşluk bırakmaması */
+  }
+
+  #submit{
+    background-color: #637a8c; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 3px; /* Kenar yuvarlatma */
+    padding: 6px 10px; /* İç dolgu */
+    width: 100px; /* Genişlik */
+  }
+
+  .alert {
+    padding: 20px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    z-index: 9999;
+    display: none;
+  }
+
+  .alert.info {background-color: #91a7c4;}

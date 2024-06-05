@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Orders - IEMS</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="open-order.css">
+
+
+</head>
+<body>
+
+<!-- Kenar çubuğu -->
+<div class="sidebar">
+    <!-- Ortalanmış metin -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2>IEMS</h2>
+    </div>
+
+    <h4>Product</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/create-product">
+            <i class="bi bi-clipboard-plus"></i>
+            Add Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/update-product">
+            <i class="bi bi-clipboard-pulse"></i>
+            Edit Product</a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/get-all-product">
+            <i class="bi bi-clipboard-data"></i>
+            Get All Product</a></li>
+    </ul>
+
+    <h4>Supply</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appSupply/manager/create-order">
+            <i class="bi bi-box2"></i>
+            Create Order</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/open-order">
+            <i class="bi bi-diagram-3"></i>
+            Order Statement</a></li>
+        <li><a href="http://localhost:8080/appSupply/manager/confirmed-orders">
+            <i class="bi bi-check2-circle"></i>
+            Confirmed Orders</a></li>
+
+    </ul>
+
+    <h4>Help</h4>
+    <ul class="links-container">
+        <li><a href="http://localhost:8080/appProduct/manager/manager-questions">
+            <i class="bi bi-question-circle" ></i>
+            Questions </a></li>
+        <li><a href="http://localhost:8080/appProduct/manager/manager-mail">
+            <i class="bi bi-envelope-paper"></i>
+            Send Mail </a></li>
+    </ul>
+    <div class="logout-container" style="position: fixed; top: 20px; right: 20px;">
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="btn"> <!-- Bir bootstrap butonu eklendi -->
+                <i class="bi bi-box-arrow-left"></i> <!-- İkon ekledik -->
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+
+<nav class="nav nav-borders">
+    <a class="nav-link active" href="http://localhost:8080/appSupply/manager/open-order" >
+        <i class="bi bi-bookmarks"></i>
+        Open Order</a>
+    <a class="nav-link" href="http://localhost:8080/appSupply/manager/close-order" >
+        <i class="bi bi-bookmarks-fill"></i>
+        Close Order</a>
+    <a class="nav-link" href="http://localhost:8080/appSupply/manager/pending-order">
+        <i class="bi bi-play-btn"></i>
+        Pending Order</a>
+    <a class="nav-link" href="http://localhost:8080/appSupply/manager/duration-order">
+        <i class="bi bi-pause-btn"></i>
+        Duration Order</a>
+    <a class="nav-link" href="http://localhost:8080/appSupply/manager/complete-order">
+        <i class="bi bi-file-earmark-check"></i>
+        Complete Order</a>
+    <a class="nav-link" href="http://localhost:8080/appSupply/manager/unsuccessful-order" >
+        <i class="bi bi-file-earmark-excel"></i>
+        Unsuccessful Order</a>
+</nav>
+
+<hr class="mt-0 mb-4">
+
+<div> <!-- Gerekli olduğu kadar sol boşluk ve dolgu ayarlayın -->
+
+    <table id="table" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Contact Person Name</th>
+            <th>Contact Person Phone</th>
+            <th>Categories</th>
+            <th>Quantity</th>
+            <th>Quantity Units</th>
+            <th>Ordering Company</th>
+            <th>Order Date</th>
+            <th>Order Status</th>
+            <th>Close Order</th>
+            <th>Cancel Order</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="open-order.js"></script>
+
+</body>
+</html>
