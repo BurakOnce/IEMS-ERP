@@ -89,11 +89,24 @@ IEMS ERP sistemi, kullanıcı, şirket, tedarik ve ürün gibi ana tablolar ve b
 ![Sıkça Sorulan Sorular](https://github.com/BurakOnce/IEMS-ERP/blob/main/employee-ss/s%C4%B1k%C3%A7a-sorulan-sorular.png)
 #### Program kullanılırken akla gelebilecek sorular. (Tüm kullanıcılarda rollerine göre farklılık gösterir)
 
-![ADMIN](https://github.com/BurakOnce/IEMS-ERP/blob/main/admin-ss/ADMIN.mp4)
 
 # IEMS-ERP bir bitirme projesidir.
 ### İstanbul Medeniyet Üniversitesi
 ### Mühendislik ve Doğa Bilimleri Fakültesi
 #### Bilgisayar Mühendisliği 2024
 #### Burak Önce 
+
+
+### Gif's
+#### Admin:
+![ADMIN](https://github.com/BurakOnce/IEMS-ERP/assets/119293638/f3df1347-c978-484a-9621-4bf33b1bf7f3)
+
+#### Manager:
+![MANAGER](https://github.com/BurakOnce/IEMS-ERP/assets/119293638/6dbf64ae-7318-4320-be26-772e4a4d8c29)
+
+#### Supplier:
+![SUPPLIER](https://github.com/BurakOnce/IEMS-ERP/assets/119293638/f34576bb-8582-4f7f-a4c9-92f5c8e0faa8)
+
+#### Employee:
+![EMPLOYEE](https://github.com/BurakOnce/IEMS-ERP/assets/119293638/ca571cd0-7a44-4552-bbad-292fcc7c0ac2)
 
