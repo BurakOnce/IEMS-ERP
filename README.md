@@ -21,11 +21,11 @@ IEMS ERP sistemi, kullanıcı, şirket, tedarik ve ürün gibi ana tablolar ve b
 - **Şirket Yönetimi:** Adminler, şirket bilgilerini düzenleyebilir veya veri tabanından silebilir.
   
 ### Kullanıcı Oluşturma:
-![Kullanıcı Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/admin-ss/kullan%C4%B1c%C4%B1-olu%C5%9Ftur.png)
+![Kullanıcı Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/admin/kullan%C4%B1c%C4%B1-olu%C5%9Ftur.png)
 ### Kullanıcı Düzenleme:
-![Kullanıcı Düzenleme](https://github.com/BurakOnce/IEMS-ERP/blob/main/admin-ss/kullan%C4%B1c%C4%B1-d%C3%BCzenle.png)
+![Kullanıcı Düzenleme](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/admin/kullan%C4%B1c%C4%B1-d%C3%BCzenle.png)
 ### Kullanıcı Listesi:
-![Kullanıcı Listesi](https://github.com/BurakOnce/IEMS-ERP/blob/main/admin-ss/kullan%C4%B1c%C4%B1-tablosu.png)
+![Kullanıcı Listesi](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/admin/kullan%C4%B1c%C4%B1-tablosu.png)
 
 
 ## Manager
@@ -35,27 +35,27 @@ IEMS ERP sistemi, kullanıcı, şirket, tedarik ve ürün gibi ana tablolar ve b
 - **Mail Gönderme:** Destek ekibiyle iletişime geçmek için "Send Mail" sayfasını kullanarak adminlere mesaj gönderebilir.
 
 ### Ürün Oluşturma:
-![Ürün Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/%C3%BCr%C3%BCn%20olu%C5%9Ftur.png)
+![Ürün Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/%C3%BCr%C3%BCn%20olu%C5%9Ftur.png)
 #### Ürün Modülü aynı zamanda "Employee"'nin de yetkileri içindedir.
 
 ### Sipariş Oluşturma :
-![Sipariş Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/tedarik%20olu%C5%9Fturma.png)
+![Sipariş Oluşturma](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/tedarik%20olu%C5%9Fturma.png)
 #### Burada seçilen "Order Status" bölümü sayesinde verilen sipariş yayına sokulabilir. Yayına hazır değil ise "Close Orders" kısmına konur ve bekletilir.
 
 ### Kapalı Sipariş :
-![Kapalı Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/kapal%C4%B1-sipari%C5%9Fler.png)
+![Kapalı Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/kapal%C4%B1-sipari%C5%9Fler.png)
 #### Burada kapalı siparişler görüntülenir. Siparişlerin yanındaki butonlar sayesinde işlevler gerçekleştirilebilir. Sipariş yayına sokulabilir, silinebilir veya halihazırda tedarikçiler tarafından alınmış bir sipariş ise onaylanabilir.
 
 ### Açık Sipariş :
-![Açık Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/a%C3%A7%C4%B1k-sipari%C5%9Fler.png)
+![Açık Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/a%C3%A7%C4%B1k-sipari%C5%9Fler.png)
 #### Bu sayfada ise yayında olan siparişler iptal edilebilir veya kapatılabilir.
 
 ### Bekleyen Sipariş :
-![Bekleyen Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/bekleyen-sipari%C5%9Fler.png)
+![Bekleyen Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/bekleyen-sipari%C5%9Fler.png)
 #### Henüz tedarikçiler tarafından üstlenilmemiş siparişler burada gözükür.
 
 ### Onaylanan Sipariş :
-![Onaylanan Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/manager-ss/onaylanan-sipari%C5%9Fler.png)
+![Onaylanan Sipariş](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/manager/onaylanan-sipari%C5%9Fler.png)
 #### Temin edildiğini garanti ettiğiniz siparişlerinizi "Open Order" sekmesinden onaylayabilir ve "Confirmed Orders" sayfasına taşıyabilirsiniz.
 
 ## Supplier
@@ -66,11 +66,11 @@ IEMS ERP sistemi, kullanıcı, şirket, tedarik ve ürün gibi ana tablolar ve b
 - **Mail Gönderme:** Destek ekibiyle iletişime geçmek için "Send Mail" sayfasını kullanarak adminlere mesaj gönderebilir.
 
 ### Açık Siparişler :
-![Açık Siparişler](https://github.com/BurakOnce/IEMS-ERP/blob/main/supplier-ss/a%C3%A7%C4%B1k%20sipari%C5%9Fler.png)
+![Açık Siparişler](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/supplier/a%C3%A7%C4%B1k%20sipari%C5%9Fler.png)
 #### Yayında olan siparişleri bu sayfada görüntüleyebilir ve "Take" butonuna tıklayıp üstlenebilirsiniz.
 
 ### Üstlenilen Siparişler :
-![Üstlenilen Siparişler](https://github.com/BurakOnce/IEMS-ERP/blob/main/supplier-ss/%C3%BCstlenilen-sipari%C5%9Fler.png)
+![Üstlenilen Siparişler](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/supplier/%C3%BCstlenilen-sipari%C5%9Fler.png)
 #### Üstlenilen siparişleri burada görüntüleyebilirsiniz. Ayrıca siparişi temin etme durumunuza göre "Done" veya "Fail" butonları ile sipariş durumunu yönetebilirsiniz.
 
 ## Employee
@@ -82,11 +82,11 @@ IEMS ERP sistemi, kullanıcı, şirket, tedarik ve ürün gibi ana tablolar ve b
 ### Ürün Yönetimi kısmı "Manager" ile aynı olduğundan buraya Ürün Modül fotoğrafları eklenmemiştir.
 
 ### Mail Gönderme :
-![Mail Gönderme](https://github.com/BurakOnce/IEMS-ERP/blob/main/employee-ss/mail-g%C3%B6nderme.png)
+![Mail Gönderme](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/employee/mail-g%C3%B6nderme.png)
 #### Herhangi bir sorun ile karşılaşırsanız bu sayfadan admin'lerle iletişime geçebilirsiniz. (Tüm kullanıcılarda bulunur)
 
 ### Sıkça Sorulan Sorular :
-![Sıkça Sorulan Sorular](https://github.com/BurakOnce/IEMS-ERP/blob/main/employee-ss/s%C4%B1k%C3%A7a-sorulan-sorular.png)
+![Sıkça Sorulan Sorular](https://github.com/BurakOnce/IEMS-ERP/blob/main/screenshots/employee/s%C4%B1k%C3%A7a-sorulan-sorular.png)
 #### Program kullanılırken akla gelebilecek sorular. (Tüm kullanıcılarda rollerine göre farklılık gösterir)
 
 <br/>
